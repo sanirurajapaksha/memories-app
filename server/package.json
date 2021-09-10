@@ -1,0 +1,9 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server file for memories-app",
+  "main": "index.js",
+  "repository": "https://github.com/sanirurajapaksha/memories-app/tree/main/server",
+  "author": "Saniru Rajapaksha",
+  "license": "MIT"
+}
