@@ -20,5 +20,3 @@ mongoose
     app.listen(PORT, () => console.log("server is listening on port " + PORT))
   )
   .catch((error) => console.log(error.message));
-
-mongoose.set("useFindAndModify", false);

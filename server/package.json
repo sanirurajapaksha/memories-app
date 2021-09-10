@@ -6,6 +6,7 @@
   "repository": "https://github.com/sanirurajapaksha/memories-app/tree/main/server",
   "author": "Saniru Rajapaksha",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
