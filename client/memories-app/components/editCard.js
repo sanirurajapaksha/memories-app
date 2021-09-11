@@ -8,7 +8,7 @@ function EditCard(props) {
   };
 
   return (
-    <div className="flex flex-col w-96 mt-10 bg-indigo-600 ml-10 rounded-3xl shadow-xl">
+    <div className="flex flex-col w-96 h-2/3 mt-10 bg-indigo-600 ml-10 rounded-3xl shadow-xl">
       <div className="flex w-full h-14 justify-center items-center font-sans font-bold text-xl">
         <h2>Create a new Memory 🤞</h2>
       </div>
