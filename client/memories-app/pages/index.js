@@ -11,7 +11,7 @@ export default function App() {
         <meta name="description" content="memories app just for fun" />
         <link rel="icon" href="favicon.ico" />
       </Head>
-      <div class="flex flex-col w-screen h-screen">
+      <div className="flex flex-col w-screen h-screen">
         <Header />
         <Body />
       </div>
