@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
-function EditCard(props) {
+function EditCard() {
+  const [selectedFile, setSelectedFile] = useState(null);
+
   const inputFile = useRef(null);
 
   const onButtonClick = () => {
@@ -8,11 +10,12 @@ function EditCard(props) {
   };
 
   const onSubmitClick = () => {
+    var formData = new FormData();
+
     var creator = document.getElementById("creator").value;
     var title = document.getElementById("title").value;
     var description = document.getElementById("description").value;
     var tags = document.getElementById("tags").value;
-    var file = document.getElementById("myFile").value;
 
     var returnObj = {
       postdetails: {
@@ -20,9 +23,11 @@ function EditCard(props) {
         title: title,
         description: description,
         tags: tags,
-        file: file,
+        file: selectedFile,
       },
     };
+
+    formData.append("myForm", returnObj);
 
     console.log(returnObj);
   };
@@ -34,13 +39,18 @@ function EditCard(props) {
     document.getElementById("description").value = "";
     document.getElementById("title").value = "";
   };
+
+  const onFileChange = (file) => {
+    setSelectedFile(file.target.files[0]);
+  };
+
   return (
     <div className="flex flex-col w-96 h-2/3 mt-10 bg-indigo-600 ml-10 rounded-3xl shadow-xl">
       <div className="flex w-full h-14 justify-center items-center font-sans font-bold text-xl">
         <h2>Create a new Memory 🤞</h2>
       </div>
       <div className="flex w-full h-full justify-center">
-        <form>
+        <form encType="multipart/form-data" method="post">
           <div>
             <label className="flex mb-2 font-sans font-bold">Creator</label>
           </div>
@@ -88,6 +98,8 @@ function EditCard(props) {
             id="myFile"
             name="filename"
             ref={inputFile}
+            onChange={onFileChange}
+            accept="image/*"
             className="opacity-0 w-px h-px"
           />
           {/*End of that nasty elemet */}
