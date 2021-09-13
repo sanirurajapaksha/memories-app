@@ -1,8 +1,12 @@
-import React from "react";
-import { wrapper } from "../redux/store";
-import "../styles/globals.css";
-import App from "next/app";
+import { Provider } from "react-redux";
+import { useStore } from "../Redux/store";
 
-const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />;
+export default function App({ Component, pageProps }) {
+  const store = useStore(pageProps.initialReduxState);
 
-export default wrapper.withRedux(MyApp);
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+}
