@@ -8,7 +8,7 @@ export default function App() {
     <div>
       <Head>
         <title>Memories App</title>
-        <meta name="description" content="memories app just for fun" />
+        <meta name="description" content="memories app just for fun!" />
         <link rel="icon" href="favicon.ico" />
       </Head>
 
