@@ -88,7 +88,7 @@ function EditCard() {
           <div className="btn mt-3 w-32" onClick={onButtonClick}>
             Choose Files
           </div>
-          {/* Below input file is not displaying, just for reference */}
+          {/* Below input field is not displaying, just for reference */}
           <input
             type="file"
             id="myFile"
