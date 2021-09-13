@@ -10,8 +10,6 @@ function EditCard() {
   };
 
   const onSubmitClick = () => {
-    var formData = new FormData();
-
     var creator = document.getElementById("creator").value;
     var title = document.getElementById("title").value;
     var description = document.getElementById("description").value;
@@ -26,8 +24,6 @@ function EditCard() {
         file: selectedFile,
       },
     };
-
-    formData.append("myForm", returnObj);
 
     console.log(returnObj);
   };
