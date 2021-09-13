@@ -7,6 +7,33 @@ function EditCard(props) {
     inputFile.current.click();
   };
 
+  const onSubmitClick = () => {
+    var creator = document.getElementById("creator").value;
+    var title = document.getElementById("title").value;
+    var description = document.getElementById("description").value;
+    var tags = document.getElementById("tags").value;
+    var file = document.getElementById("myFile").value;
+
+    var returnObj = {
+      postdetails: {
+        creator: creator,
+        title: title,
+        description: description,
+        tags: tags,
+        file: file,
+      },
+    };
+
+    console.log(returnObj);
+  };
+
+  const onClearButtonClick = () => {
+    document.getElementById("creator").value = "";
+    document.getElementById("myFile").value = "";
+    document.getElementById("tags").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("title").value = "";
+  };
   return (
     <div className="flex flex-col w-96 h-2/3 mt-10 bg-indigo-600 ml-10 rounded-3xl shadow-xl">
       <div className="flex w-full h-14 justify-center items-center font-sans font-bold text-xl">
@@ -65,8 +92,12 @@ function EditCard(props) {
           />
           {/*End of that nasty elemet */}
           <div className="flex flex-row space-x-2 mt-3 w-full h-12 justify-between">
-            <div className="btn btn-accent w-1/2">Submit</div>
-            <div className="btn btn-accent w-1/2">Clear</div>
+            <div className="btn btn-accent w-1/2" onClick={onSubmitClick}>
+              Submit
+            </div>
+            <div className="btn btn-accent w-1/2" onClick={onClearButtonClick}>
+              Clear
+            </div>
           </div>
         </form>
       </div>
