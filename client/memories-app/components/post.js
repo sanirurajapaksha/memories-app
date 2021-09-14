@@ -2,7 +2,7 @@ import React from "react";
 
 function Post(props) {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-1 gap-6 mt-10 ml-9">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-9">
       <div className="flex flex-col w-80 h-96 bg-white rounded-2xl">
         <div className="flex flex-row w-full h-8 justify-between items-center">
           <div className="ml-3">
