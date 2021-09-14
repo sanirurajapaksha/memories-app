@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { createPost } from "../Redux/actions/postActions";
 
 function EditCard() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -19,18 +20,14 @@ function EditCard() {
     var tags = document.getElementById("tags").value;
 
     var returnObj = {
-      postdetails: {
-        creator: creator,
-        title: title,
-        description: description,
-        tags: tags,
-        file: selectedFile,
-      },
+      creator: creator,
+      title: title,
+      description: description,
+      tags: tags,
+      file: selectedFile,
     };
 
-    return returnObj;
-
-    console.log(returnObj);
+    dispatch(createPost(returnObj));
   };
 
   const onClearButtonClick = () => {
