@@ -4,7 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import combineReducers from "../Redux/reducers/combine";
 
 function MyApp({ Component, pageProps }) {
-  const store = configureStore(combineReducers);
+  const store = configureStore({ reducer: combineReducers });
   return (
     <Provider store={store}>
       <Component {...pageProps} />;

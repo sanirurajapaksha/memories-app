@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { createPost } from "../Redux/actions/postActions";
 
 function EditCard() {
@@ -7,7 +7,7 @@ function EditCard() {
 
   const inputFile = useRef(null);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const onButtonClick = () => {
     inputFile.current.click();
@@ -27,7 +27,7 @@ function EditCard() {
       file: selectedFile,
     };
 
-    dispatch(createPost(returnObj));
+    createPost(returnObj);
   };
 
   const onClearButtonClick = () => {
