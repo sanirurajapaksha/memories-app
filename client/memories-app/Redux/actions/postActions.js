@@ -1,7 +1,3 @@
-import { useDispatch } from "react-redux";
-
-dispatch = useDispatch();
-
 export const getPosts = () => {
   dispatch({
     type: "post/get",
@@ -9,7 +5,7 @@ export const getPosts = () => {
   });
 };
 
-export const createPost = (payload) => {
+export const createPost = (payload) => (dispatch) => {
   dispatch({
     type: "post/create",
     payload: payload,
