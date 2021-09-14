@@ -1,6 +1,6 @@
 const initialState = [];
 
-export default function postReducer(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case "post/create":
       console.log(action.payload);
@@ -12,4 +12,4 @@ export default function postReducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
