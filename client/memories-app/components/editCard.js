@@ -1,13 +1,19 @@
-import React, { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { createPost } from "../Redux/actions/postActions";
+import React, { useRef, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createPost, getPosts } from "../Redux/actions/postActions";
 
 function EditCard() {
   const [selectedFile, setSelectedFile] = useState(null);
 
-  const inputFile = useRef(null);
-
   const dispatch = useDispatch();
+
+  const posts = useSelector((state) => state.postReducers);
+
+  useEffect(() => {
+    dispatch(getPosts(posts));
+  }, [dispatch]);
+
+  const inputFile = useRef(null);
 
   const onButtonClick = () => {
     inputFile.current.click();
