@@ -1,4 +1,4 @@
-export const getPosts = () => {
+export const getPosts = () => (dispatch) => {
   dispatch({
     type: "post/get",
     payload: null,
