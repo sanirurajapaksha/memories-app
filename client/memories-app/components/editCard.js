@@ -1,9 +1,12 @@
 import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 
 function EditCard() {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const inputFile = useRef(null);
+
+  const dispatch = useDispatch();
 
   const onButtonClick = () => {
     inputFile.current.click();
@@ -24,6 +27,8 @@ function EditCard() {
         file: selectedFile,
       },
     };
+
+    return returnObj;
 
     console.log(returnObj);
   };
