@@ -26,10 +26,11 @@ function EditCard() {
     var tags = document.getElementById("tags").value;
 
     var returnObj = {
-      creator: creator,
       title: title,
       description: description,
+      creator: creator,
       tags: tags,
+      likeCount: 10,
     };
 
     dispatch(createPost(returnObj));
