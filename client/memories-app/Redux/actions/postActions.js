@@ -8,15 +8,12 @@ export const getPosts = (payload) => (dispatch) => {
 };
 
 export const createPost = (payload) => async (dispatch) => {
+  const config = {
+    headers: { "Access-Control-Allow-Origin": "http://localhost:8080/" },
+  };
   var jsonData = JSON.stringify(payload);
   var postData = await axios
-    .post("http://localhost:8080/posts/create-post", jsonData, {
-      baseURL: "http://localhost:8080",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-      },
-    })
+    .post("http://localhost:8080/posts/create-post", payload, config)
     .then(() => console.log(postData))
     .catch((err) => console.log(err));
   dispatch({
