@@ -7,6 +7,7 @@
   "author": "Saniru Rajapaksha",
   "license": "MIT",
   "type": "module",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "nodemon index.js"
   },
