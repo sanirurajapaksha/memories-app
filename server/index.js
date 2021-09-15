@@ -14,7 +14,7 @@ app.use(cors());
 
 const CONNECTION_URL =
   "mongodb+srv://saniru_rajapaksha:WnL3LZD74wyBDACv@memories-cluster.gd90z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
