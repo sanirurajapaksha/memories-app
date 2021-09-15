@@ -8,8 +8,8 @@ const app = express();
 
 app.use("/posts", router);
 
-app.use(express.json({ limit: "50mb", extended: true }));
-app.use(express.urlencoded({ limit: "50mb", extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 const CONNECTION_URL =
