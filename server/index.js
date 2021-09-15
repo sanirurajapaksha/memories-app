@@ -21,6 +21,6 @@ const options = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose
   .connect(CONNECTION_URL, options)
   .then(() =>
-    app.listen(PORT, () => console.log("server is listening on port " + PORT))
+    app.listen(PORT, () => console.log("server started: listening on port " + PORT))
   )
   .catch((error) => console.log(error.message));
