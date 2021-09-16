@@ -6,11 +6,11 @@ import router from "../server/routes/Post.js";
 
 const app = express();
 
-app.use("/posts", router);
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+
+app.use("/posts", router);
 
 const CONNECTION_URL =
   "mongodb+srv://saniru_rajapaksha:WnL3LZD74wyBDACv@memories-cluster.gd90z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";

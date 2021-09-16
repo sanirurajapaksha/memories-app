@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const postSchema = mongoose.Schema({
   title: { type: String, required: false },
   description: { type: String, required: false },
-  creator: { type: String, required: false },
-  tags: { type: String, required: false },
+  creator: { type: String, required: false, default: "saniru" },
+  tags: { type: String, required: false, default: "hello" },
   likeCount: {
     type: Number,
     default: 0,
