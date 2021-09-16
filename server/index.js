@@ -6,9 +6,9 @@ import router from "../server/routes/Post.js";
 
 const app = express();
 
-app.use(cors());
 app.use(express.json({ extend: true }));
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use("/posts", router);
 

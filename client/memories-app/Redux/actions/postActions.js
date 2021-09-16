@@ -9,11 +9,13 @@ export const getPosts = (payload) => (dispatch) => {
 
 export const createPost = (payload) => async (dispatch) => {
   const config = {
-    headers: { "Access-Control-Allow-Origin": "http://localhost:8080/" },
+    headers: {
+      "Content-Type": "application/json",
+    },
   };
   var jsonData = JSON.stringify(payload);
   var postData = await axios
-    .post("http://localhost:8080/posts/create-post", payload, config)
+    .post("http://localhost:8080/posts/", jsonData, config)
     .then(() => console.log(postData))
     .catch((err) => console.log(err));
   dispatch({
