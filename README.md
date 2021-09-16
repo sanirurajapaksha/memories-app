@@ -1,1 +1,1 @@
-# memories-app
+# A full-stack MERN application 😃
