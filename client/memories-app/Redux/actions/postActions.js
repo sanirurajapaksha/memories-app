@@ -8,7 +8,6 @@ export const getPosts = () => async (dispatch) => {
   await axios
     .get("http://localhost:8080/posts/")
     .then((data) => (postData = data.data))
-    .then(() => console.log(postData))
     .catch((err) => console.log(err));
 
   // 2. Return Redux state immediately with Updated Data
