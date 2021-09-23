@@ -17,9 +17,8 @@ export const createPost = (payload) => async (dispatch) => {
     },
   };
   var jsonData = JSON.stringify(payload);
-  var postData = await axios
+  await axios
     .post("http://localhost:8080/posts/", jsonData, config)
-    .then(() => console.log(postData))
     .catch((err) => console.log(err));
 
   // 2. Create Post in REDUX State
