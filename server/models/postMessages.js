@@ -13,6 +13,10 @@ const postSchema = mongoose.Schema({
     type: String,
     required: false,
   },
+  selectedFile: {
+    type: String,
+    required: false,
+  },
   tags: {
     type: String,
     required: false,
