@@ -10,7 +10,7 @@ function EditCard() {
   const postsFromRedux = useSelector((state) => state.postReducers);
 
   useEffect(() => {
-    dispatch(getPosts(posts));
+    dispatch(getPosts());
   }, [dispatch]);
 
   const inputFile = useRef(null);
