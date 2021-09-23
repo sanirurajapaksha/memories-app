@@ -8,6 +8,8 @@ export const getPosts = (payload) => (dispatch) => {
 };
 
 export const createPost = (payload) => async (dispatch) => {
+  // Send the POST request to server
+
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -18,6 +20,9 @@ export const createPost = (payload) => async (dispatch) => {
     .post("http://localhost:8080/posts/", jsonData, config)
     .then(() => console.log(postData))
     .catch((err) => console.log(err));
+
+  // Create Post in REDUX State
+
   dispatch({
     type: "post/create",
     payload: payload,
