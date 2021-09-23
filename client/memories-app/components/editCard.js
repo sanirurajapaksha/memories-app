@@ -54,7 +54,7 @@ function EditCard() {
         <h2>Create a new Memory 🤞</h2>
       </div>
       <div className="flex w-full h-full justify-center">
-        <form encType="multipart/form-data" method="post">
+        <form enctype="multipart/form-data" method="post">
           <div>
             <label className="flex mb-2 font-sans font-bold">Creator</label>
           </div>
