@@ -29,7 +29,7 @@ function EditCard() {
       title: title,
       description: description,
       creator: creator,
-      
+      selectedFile: selectedFile,
       tags: tags,
       likeCount: 10,
     };
