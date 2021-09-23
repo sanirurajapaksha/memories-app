@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
 
     case "post/get":
-      return null;
+      return [...state, action.payload];
 
     default:
       return state;
