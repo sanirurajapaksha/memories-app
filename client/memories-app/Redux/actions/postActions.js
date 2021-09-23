@@ -7,8 +7,9 @@ export const getPosts = (payload) => (dispatch) => {
   });
 };
 
+// Below function does 2 things.
 export const createPost = (payload) => async (dispatch) => {
-  // Send the POST request to server
+  // 1. Send the POST request to server
 
   const config = {
     headers: {
@@ -21,7 +22,7 @@ export const createPost = (payload) => async (dispatch) => {
     .then(() => console.log(postData))
     .catch((err) => console.log(err));
 
-  // Create Post in REDUX State
+  // 2. Create Post in REDUX State
 
   dispatch({
     type: "post/create",
