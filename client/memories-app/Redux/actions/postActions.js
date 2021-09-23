@@ -1,9 +1,12 @@
 import axios from "axios";
 
-export const getPosts = (payload) => (dispatch) => {
+export const getPosts = (payload) => async (dispatch) => {
+  await axios
+    .get("http://localhost:8080/posts/")
+    .then((postData) => postData.data)
+    .catch((err) => console.log(err));
   dispatch({
     type: "post/get",
-    payload: payload,
   });
 };
 
