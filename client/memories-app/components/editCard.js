@@ -113,12 +113,6 @@ function EditCard() {
             accept="image/*"
             className="opacity-0 w-px h-px"
           />
-          {/* <FileBase
-            ref={inputFile}
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) => setSelectedFile(base64)}
-          /> */}
           {/*End of that nasty elemet */}
           <div className="flex flex-row space-x-2 mt-3 w-full h-12 justify-between">
             <div className="btn btn-accent w-1/2" onClick={onSubmitClick}>
