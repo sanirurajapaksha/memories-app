@@ -38,7 +38,6 @@ function EditCard() {
 
   const onClearButtonClick = () => {
     document.getElementById("creator").value = "";
-    // document.getElementById("myFile").value = "";
     document.getElementById("tags").value = "";
     document.getElementById("description").value = "";
     document.getElementById("title").value = "";
