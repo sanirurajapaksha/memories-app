@@ -9,7 +9,7 @@ function Body(props) {
 
   const postsFromRedux = useSelector((state) => state.postReducers);
 
-  useEffect(async () => {
+  useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
 
