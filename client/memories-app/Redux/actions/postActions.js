@@ -1,6 +1,9 @@
 import axios from "axios";
 
+// Below function does 2 things.
 export const getPosts = (payload) => async (dispatch) => {
+  // 1. Send the GET request to server
+
   await axios
     .get("http://localhost:8080/posts/")
     .then((postData) => postData.data)
