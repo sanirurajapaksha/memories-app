@@ -7,7 +7,7 @@ function EditCard() {
 
   const dispatch = useDispatch();
 
-  const posts = useSelector((state) => state.postReducers);
+  const postsFromRedux = useSelector((state) => state.postReducers);
 
   useEffect(() => {
     dispatch(getPosts(posts));
