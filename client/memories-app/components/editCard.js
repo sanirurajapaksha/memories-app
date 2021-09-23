@@ -51,7 +51,6 @@ function EditCard() {
     reader.readAsDataURL(file);
 
     reader.onloadend = () => {
-      console.log(reader.readyState); // debugging line;
       setSelectedFile(reader.result);
     };
   };
