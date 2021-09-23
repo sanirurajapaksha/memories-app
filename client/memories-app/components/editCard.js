@@ -31,7 +31,6 @@ function EditCard() {
       creator: creator,
       selectedFile: selectedFile,
       tags: tags,
-      likeCount: 10,
     };
 
     dispatch(createPost(returnObj));
@@ -39,14 +38,23 @@ function EditCard() {
 
   const onClearButtonClick = () => {
     document.getElementById("creator").value = "";
-    document.getElementById("myFile").value = null;
+    // document.getElementById("myFile").value = "";
     document.getElementById("tags").value = "";
     document.getElementById("description").value = "";
     document.getElementById("title").value = "";
   };
 
-  const onFileChange = (file) => {
-    setSelectedFile(file.target.files[0]);
+  const onFileChange = (dataUrlFile) => {
+    const file = dataUrlFile.target.files[0];
+
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+
+    reader.onloadend = () => {
+      console.log(reader.readyState); // debugging line;
+      setSelectedFile(reader.result);
+    };
   };
 
   return (
@@ -55,7 +63,7 @@ function EditCard() {
         <h2>Create a new Memory 🤞</h2>
       </div>
       <div className="flex w-full h-full justify-center">
-        <form enctype="multipart/form-data" method="post">
+        <form encType="multipart/form-data" method="post">
           <div>
             <label className="flex mb-2 font-sans font-bold">Creator</label>
           </div>
@@ -107,6 +115,12 @@ function EditCard() {
             accept="image/*"
             className="opacity-0 w-px h-px"
           />
+          {/* <FileBase
+            ref={inputFile}
+            type="file"
+            multiple={false}
+            onDone={({ base64 }) => setSelectedFile(base64)}
+          /> */}
           {/*End of that nasty elemet */}
           <div className="flex flex-row space-x-2 mt-3 w-full h-12 justify-between">
             <div className="btn btn-accent w-1/2" onClick={onSubmitClick}>
