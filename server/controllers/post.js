@@ -11,8 +11,10 @@ export const getPosts = async (req, res) => {
 };
 
 export const createPosts = async (req, res) => {
+  var file = req.files;
   var post = req.body;
   console.log(post); // debugging line
+  console.log(file);
   const newPosts = new PostMessage(post);
   try {
     await newPosts.save();
