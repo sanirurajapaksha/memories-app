@@ -8,8 +8,14 @@ function Body() {
   return (
     <div className="flex w-full h-full bg-gray-600">
       <div className="flex flex-row mt-28">
-        <Post postState={postsFromRedux} />
-        <EditCard />
+        {!postsFromRedux.length ? (
+          <Post postState={postsFromRedux} />
+        ) : (
+          <>
+            <Post postState={postsFromRedux} />
+            <EditCard />
+          </>
+        )}
       </div>
     </div>
   );
