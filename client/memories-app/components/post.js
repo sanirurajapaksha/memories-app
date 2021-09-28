@@ -26,7 +26,6 @@ function Post(props) {
               src={post[i].selectedFile}
               className="h-full w-full object-fill"
             />
-            {/*Image goes here */}
           </div>
           <div className="flex w-72 h-6 ml-2 mt-1 text-gray-700 text-sm font-sans">
             {post[i].tags}
