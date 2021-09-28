@@ -3,7 +3,9 @@ import { CircularProgress } from "@material-ui/core";
 
 function Post(props) {
   return !props.postState.length ? (
-    <CircularProgress />
+    <div className="flex flex-row w-full h-full object-fill">
+      <CircularProgress />
+    </div>
   ) : (
     <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 mt-10 ml-9"></div>
   );
