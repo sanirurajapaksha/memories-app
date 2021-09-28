@@ -9,9 +9,7 @@ function Body() {
     <div className="flex w-full h-full bg-gray-600">
       <div className="flex flex-row mt-28">
         {!postsFromRedux.length ? (
-          <div className="flex w-full h-full">
-            <Post postState={postsFromRedux} />
-          </div>
+          <Post postState={postsFromRedux} />
         ) : (
           <>
             <Post postState={postsFromRedux} />
