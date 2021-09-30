@@ -2,13 +2,13 @@ import React from "react";
 import moment from "moment";
 
 function Post(props) {
-  var postane = props.postState[0];
-  if (postane === undefined) {
+  var postdata = props.postState[0];
+  if (postdata === undefined) {
     return <div></div>;
   } else
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 mt-10 ml-9">
-        {postane.map((post, i) => (
+        {postdata.map((post, i) => (
           <div key={i}>
             <div className="flex flex-col w-80 h-96 bg-gray-300 rounded-2xl">
               <div className="flex flex-row w-full h-8 justify-between items-center">
