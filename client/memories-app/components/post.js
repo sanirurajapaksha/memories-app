@@ -1,10 +1,11 @@
 import React from "react";
 import moment from "moment";
+import { CircularProgress } from "@material-ui/core";
 
 function Post(props) {
   var postdata = props.postState[0];
   if (postdata === undefined) {
-    return <div></div>;
+    return <CircularProgress />;
   } else
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 mt-10 ml-9">
