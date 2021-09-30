@@ -5,7 +5,7 @@ import { CircularProgress } from "@material-ui/core";
 function Post(props) {
   var postdata = props.postState[0];
   if (postdata === undefined) {
-    return <CircularProgress />;
+    return <CircularProgress color="inherit" size={100} />;
   } else
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 mt-10 ml-9">
