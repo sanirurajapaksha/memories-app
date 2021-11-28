@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Below function does 2 things.
+// Below function do 2 things.
 export const getPosts = () => async (dispatch) => {
   // 1. Send the GET request to server and get the data
 
@@ -18,7 +18,7 @@ export const getPosts = () => async (dispatch) => {
   });
 };
 
-// Below function does 2 things.
+// Below function do 2 things.
 export const createPost = (payload) => async (dispatch) => {
   // 1. Send the POST request to server
 
