@@ -19,7 +19,6 @@ export default function App() {
         <meta name="description" content="memories app just for fun!" />
         <link rel="icon" href="favicon.ico" />
       </Head>
-
       <Header />
       <Body />
     </div>
