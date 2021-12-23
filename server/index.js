@@ -12,14 +12,12 @@ app.use(cors());
 
 app.use("/posts", router);
 
-const CONNECTION_URL =
-  "mongodb+srv://saniru_rajapaksha:WnL3LZD74wyBDACv@memories-cluster.gd90z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 8080;
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
 mongoose
-  .connect(CONNECTION_URL, options)
+  .connect(process.env.CONNECTION_URL, options)
   .then(() =>
     app.listen(PORT, () =>
       console.log("server started: listening on port " + PORT)
